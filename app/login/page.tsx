@@ -12,7 +12,6 @@ export default function LoginPage() {
         </p>
 
         <form className="space-y-5">
-          {/* Campo de E-mail */}
           <div>
             <label 
               htmlFor="email" 
@@ -29,7 +28,6 @@ export default function LoginPage() {
             />
           </div>
 
-          {/* Campo de Senha */}
           <div>
             <label 
               htmlFor="password" 
@@ -46,7 +44,6 @@ export default function LoginPage() {
             />
           </div>
 
-          {/* Opções extras */}
           <div className="flex items-center justify-between text-sm">
             <label className="flex items-center gap-2 font-medium text-[#26436C] cursor-pointer">
               <input 
@@ -60,7 +57,6 @@ export default function LoginPage() {
             </a>
           </div>
 
-          {/* Botão de Submit */}
           <button
             type="submit"
             className="mt-4 w-full rounded-xl bg-[#0E1A27] px-4 py-3.5 text-base font-bold text-[#f0E1D1] transition-all hover:bg-[#26436C] hover:shadow-lg hover:shadow-[#0E1A27]/20 active:scale-[0.98]"
