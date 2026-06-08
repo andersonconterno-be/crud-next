@@ -16,7 +16,6 @@ export default function UsuariosPage() {
   const router = useRouter();
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
 
-  // --- Modal de edição ---
   const [modalAberto, setModalAberto] = useState(false);
   const [usuarioEditando, setUsuarioEditando] = useState<Usuario | null>(null);
   const [editName, setEditName] = useState('');
@@ -41,13 +40,11 @@ export default function UsuariosPage() {
     getUsers().then((data) => setUsuarios(data));
   }, []);
 
-  // --- Logout ---
   function handleLogout() {
     localStorage.removeItem('token');
     router.push('/login');
   }
 
-  // --- Excluir ---
   async function handleExcluir(id: string) {
     if (!confirm('Tem certeza que deseja excluir este usuário?')) return;
 
@@ -64,7 +61,6 @@ export default function UsuariosPage() {
     }
   }
 
-  // --- Abrir modal de edição ---
   function handleAbrirModal(usuario: Usuario) {
     setUsuarioEditando(usuario);
     setEditName(usuario.name);
@@ -81,7 +77,6 @@ export default function UsuariosPage() {
     setUsuarioEditando(null);
   }
 
-  // --- Salvar edição ---
   async function handleSalvarEdicao(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!usuarioEditando) return;

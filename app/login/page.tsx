@@ -51,6 +51,10 @@ export default function LoginPage() {
     }
   }
 
+  function register() {
+    router.push('/cadastro');
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#f0E1D1] p-4">
       <div className="w-full max-w-md rounded-2xl bg-white/95 p-8 shadow-2xl shadow-[#0E1A27]/10 border border-[#26436C]/10 backdrop-blur-sm">
@@ -132,6 +136,18 @@ export default function LoginPage() {
             Entrar
           </button>
         </form>
+
+      <p className="mt-4 text-center text-sm font-medium text-[#26436C]">
+            Se ainda não tem acesso, cadastre-se!
+          </p>
+
+          <button
+            type="submit"
+            className="mt-2 w-full rounded-xl bg-[#0E1A27] px-4 py-3.5 text-base font-bold text-[#f0E1D1] transition-all hover:bg-[#26436C] hover:shadow-lg hover:shadow-[#0E1A27]/20 active:scale-[0.98]"
+            onClick={register}
+          >
+            Cadastrar
+          </button>
       </div>
     </div>
   );
